@@ -2,7 +2,7 @@
   <div class="category col-md-6" *ngFor="let category of categories | filterLinks : search">
     <h2 class="category__heading">{{category.category}}</h2>
     <ul class="category__links">
-      <li *ngFor="let link of category.links">
+      <li *ngFor="let link of category.links | fixLinks">
         <a [href]="link.url" [title]="link.title">
           {{link.title}}
         </a>
