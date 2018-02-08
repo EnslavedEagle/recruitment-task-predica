@@ -1,27 +1,31 @@
-# Predica
+# Predica Recruitment Task
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.7.
+This is a **ToolBox** Application that builds a collection of randomly generated URLs placed in randomly generated categories.
 
-## Development server
+The **ToolBox** fetches data from an API written in Node.js, hosted on [Heroku](https://heroku.com/). You can see the code I used for the API server [here](https://github.com/EnslavedEagle/recruitment-task-predica-backend).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+**[>> See live version of this application! <<](http://tth.patrykb.pl/predica)**
 
-## Code scaffolding
+## Local installation
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+#### Getting the API working locally
 
-## Build
+* Clone the backend [repository from here](https://github.com/EnslavedEagle/recruitment-task-predica-backend),
+* `npm install` or `yarn install` the API project,
+* `npm start` or `yarn start` the API project.  
+  * this application won't work locally without the backend server running, unless you build it using `prod` environment, which uses API hosted on Heroku.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+#### Getting this app to work locally
+* Clone this repository `git clone https://github.com/EnslavedEagle/recruitment-task-predica.git`
+* `cd recruitment-task-predica`
+* `npm install` or `yarn install` to fetch all dependencies
+* `yarn start` to run the application, the browser should open automatically.
+  * go to `http://localhost:4200` if it didn't.
 
-## Running unit tests
+## Stuff used
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+* Angular 5
+* Sass
+* Bootstrap 4
+* Angular Material
+* [Loading.io](https://loading.io/) to generate an animated loader
