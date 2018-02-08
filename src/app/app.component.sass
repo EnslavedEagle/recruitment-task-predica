@@ -1,0 +1,35 @@
+@keyframes SearchInput
+  from
+    width: 0px
+  to
+    width: 100%
+
+.container
+  padding-top: 2rem
+  padding-bottom: 2.6rem
+
+  .brand
+    display: flex
+    align-items: center
+
+  .brand__name
+    font-family: 'Montserrat'
+    font-size: 1.8rem
+    font-weight: 900
+    &--left
+      color: #212121
+    &--right
+      color: #4285F4
+
+  .search
+    display: flex
+    align-items: center
+    justify-content: flex-end
+
+    .search__wrapper
+      width: 240px
+      transition: width .4s ease-in-out
+      margin-bottom: 0
+
+      &.focus
+        width: 100%
