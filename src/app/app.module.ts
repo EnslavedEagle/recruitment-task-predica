@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { MatInputModule } from '@angular/material';
+import { MatInputModule, MatIconModule } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -30,6 +30,7 @@ import { FixLinksPipe } from '../pipes/fix-links.pipe';
     BrowserAnimationsModule,
     FormsModule,
     MatInputModule,
+    MatIconModule,
     HttpClientModule,
     NgbModule.forRoot(),
     AppRoutingModule

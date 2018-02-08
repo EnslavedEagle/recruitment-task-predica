@@ -5,7 +5,7 @@ import { Category, Link } from '../interfaces';
   name: 'filterLinks'
 })
 export class FilterLinksPipe implements PipeTransform {
-  transform(links: Link[], search: string): Category[] {
+  transform(links: Link[], search: string): Link[] {
     if (!links) return null;
     if (!search) return links;
     return links.filter((link) => link.title.toLowerCase().includes(search.toLowerCase()));
