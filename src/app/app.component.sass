@@ -1,8 +1,4 @@
-@keyframes SearchInput
-  from
-    width: 0px
-  to
-    width: 100%
+@import '../sass/variables'
 
 .container
   padding-top: 2rem
@@ -17,19 +13,6 @@
     font-size: 1.8rem
     font-weight: 900
     &--left
-      color: #212121
+      color: $color-text
     &--right
-      color: #4285F4
-
-  .search
-    display: flex
-    align-items: center
-    justify-content: flex-end
-
-    .search__wrapper
-      width: 240px
-      transition: width .4s ease-in-out
-      margin-bottom: 0
-
-      &.focus
-        width: 100%
+      color: $color-main
