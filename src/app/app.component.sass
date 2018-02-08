@@ -5,49 +5,7 @@
   padding-top: 2rem
   padding-bottom: 2.6rem
 
-  .brand, .search
-    display: flex
-    flex-wrap: nowrap
-
-    +media-breakpoint-down('xs')
-      justify-content: center
-      margin: .75rem 0 .5rem
-
-  .brand
+  .site-header
     display: flex
     align-items: center
 
-    .brand__name
-      font-family: 'Montserrat'
-      font-size: 1.8rem
-      font-weight: 900
-      &--left
-        color: $color-text
-      &--right
-        color: $color-main
-  
-  .search
-    display: flex
-    flex-wrap: nowrap
-    align-items: center
-    justify-content: flex-end
-
-    +media-breakpoint-down('xs')
-      background: #f0f0f0
-      justify-content: center
-      padding-top: 5px
-
-    .search__wrapper
-      max-width: 200px
-      width: 100%
-      transition: max-width .4s ease-in-out
-    
-      mat-form-field
-        width: 100%
-
-      &--focus
-        max-width: 100%
-    
-      mat-icon
-        position: relative
-        top: 5px

@@ -1,4 +1,10 @@
-<div class="category col-sm-6" *ngFor="let category of categories | filterCategories : search">
+<div class="col-sm-12">
+  <p class="searching-for" *ngIf="search.length">We're trying to find anything with <em>{{search}}</em>...</p>
+</div>
+<div class="loader col-sm-12" *ngIf="!categories">
+  <img src="assets/loader.svg" alt="Loading...">
+</div>
+<div class="category col-sm-6 col-md-4" *ngFor="let category of categories | filterCategories : search">
   <h2 class="category__heading">{{category.category}}</h2>
   <ul class="category__links">
     <li *ngFor="let link of category.links | filterLinks : search | fixLinks">
@@ -8,6 +14,6 @@
     </li>
   </ul>
 </div>
-<div class="category-empty" *ngIf="search !== '' && (categories | filterCategories : search).length === 0">
+<div class="col-sm-12 category-empty" *ngIf="categories && search.length && (categories | filterCategories : search).length === 0">
   <p>Unfortunatelly, we don't have anything you're searching for.</p>
 </div>

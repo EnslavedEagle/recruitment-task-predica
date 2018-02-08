@@ -1,7 +1,22 @@
+@import '~bootstrap/scss/bootstrap-grid'
+@import '../../../sass/variables'
+
 .category
-  margin-top: .85rem
   margin-bottom: 1.2rem
+  margin-top: .85rem
 
   &__heading
     font-size: 1.1em
     font-weight: 900
+
+  +media-breakpoint-down('sm')
+    &__links
+      list-style-type: none
+      padding: 0
+      margin: 0
+      
+      a
+        border: 1px solid rgba($color-main, .5)
+        display: block
+        margin: .25rem
+        padding: .55rem .75rem

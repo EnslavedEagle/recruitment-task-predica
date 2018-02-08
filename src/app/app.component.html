@@ -1,28 +1,11 @@
 <div class="container">
-  <div class="row">
+  <header class="row site-header">
     <div class="brand col-sm-6">
-      <h1 class="brand__name">
-        <span class="brand__name--left">Tool</span><span class="brand__name--right">Box</span>
-      </h1>
+      <pre-brand></pre-brand>
     </div>
-    <div class="search col-sm-6">
-      <div class="search__wrapper" [ngClass]="{'search__wrapper--focus': searchFocus}">
-        <mat-form-field>
-          <mat-icon matSuffix aria-hidden="true">search</mat-icon>
-          <input matInput
-            class="search__input"
-            type="text"
-            placeholder="Type to search..."
-            [(ngModel)]="search"
-            (focus)="searchFocus = true"
-            (focusout)="searchFocus = false"
-          >
-        </mat-form-field>
-      </div>
+    <div class="col-sm-6">
+      <pre-search (update)="searchUpdate($event)"></pre-search>
     </div>
-  </div>
-  <div class="row">
-    <p class="searching-for" *ngIf="search.length">We're trying to find anything with <em>{{search}}</em>...</p>
-  </div>
+  </header>
   <pre-categories class="row" [categories]="categories" [search]="search"></pre-categories>
 </div>

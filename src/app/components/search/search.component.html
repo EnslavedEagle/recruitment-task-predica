@@ -1,0 +1,16 @@
+<div class="search">
+  <div class="search__wrapper" [ngClass]="{'search__wrapper--focus': searchFocus}">
+    <mat-form-field>
+      <mat-icon matSuffix aria-hidden="true">search</mat-icon>
+      <input matInput
+        class="search__input"
+        type="text"
+        placeholder="Type to search..."
+        [(ngModel)]="search"
+        (focus)="searchFocus = true"
+        (focusout)="searchFocus = false"
+        (keyup)="handleKeyup()"
+      >
+    </mat-form-field>
+  </div>
+</div>

@@ -7,8 +7,8 @@ import { Category, Link } from '../../../interfaces';
   styleUrls: ['./categories.component.sass']
 })
 export class CategoriesComponent {
-  @Input() public categories: Category;
-  @Input() public search: string;
+  @Input() public categories: Category[] = [];
+  @Input() public search: string = '';
 
   constructor() {}
 }

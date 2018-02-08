@@ -6,10 +6,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatInputModule, MatIconModule } from '@angular/material';
 
-import { AppRoutingModule } from './app-routing.module';
-
 import { AppComponent } from './app.component';
-import { CategoriesComponent } from './components';
+import { CategoriesComponent, SearchComponent, BrandComponent } from './components';
 
 import { LinksService } from '../services/links.service';
 
@@ -21,6 +19,8 @@ import { FixLinksPipe } from '../pipes/fix-links.pipe';
   declarations: [
     AppComponent,
     CategoriesComponent,
+    SearchComponent,
+    BrandComponent,
     FilterCategoriesPipe,
     FilterLinksPipe,
     FixLinksPipe
@@ -32,8 +32,7 @@ import { FixLinksPipe } from '../pipes/fix-links.pipe';
     MatInputModule,
     MatIconModule,
     HttpClientModule,
-    NgbModule.forRoot(),
-    AppRoutingModule
+    NgbModule.forRoot()
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
   providers: [

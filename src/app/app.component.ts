@@ -8,7 +8,6 @@ import { LinksService } from '../services/links.service';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent implements OnInit {
-  public searchFocus: boolean = false;
   public categories: Category[];
   public search: string = '';
   
@@ -17,5 +16,9 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this._linksService.fetchLinks()
       .subscribe((categories) => this.categories = categories);
+  }
+
+  searchUpdate(search: string) {
+    this.search = search;
   }
 }

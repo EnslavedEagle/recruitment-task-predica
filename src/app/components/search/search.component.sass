@@ -1,0 +1,28 @@
+@import '~bootstrap/scss/bootstrap-grid'
+
+.search
+  align-items: center
+  display: flex
+  flex-wrap: nowrap
+  justify-content: flex-end
+
+  +media-breakpoint-down('xs')
+    background: #f0f0f0
+    justify-content: center
+    margin: .75rem 0 .5rem
+    padding: 5px 15px 0
+
+  .search__wrapper
+    max-width: 200px
+    transition: max-width .4s ease-in-out
+    width: 100%
+  
+    mat-form-field
+      width: 100%
+
+    &--focus
+      max-width: 100%
+  
+    mat-icon
+      position: relative
+      top: 5px
