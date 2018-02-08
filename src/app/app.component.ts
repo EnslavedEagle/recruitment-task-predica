@@ -10,7 +10,7 @@ import { LinksService } from '../services/links.service';
 export class AppComponent implements OnInit {
   public searchFocus: boolean = false;
   public categories: Category[];
-  public search = '';
+  public search: string = '';
   
   constructor(private _linksService: LinksService) {}
   

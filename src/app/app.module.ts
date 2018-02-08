@@ -11,10 +11,13 @@ import { CategoriesComponent } from './components';
 
 import { LinksService } from '../services/links.service';
 
+import { FilterLinksPipe } from '../pipes/filter-links.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    FilterLinksPipe
   ],
   imports: [
     BrowserModule,
