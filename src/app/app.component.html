@@ -1,22 +1,18 @@
 <div class="container">
   <div class="row">
-    {{search}}
-  </div>
-  <div class="row">
     <div class="brand col-md-6">
       <h1 class="brand__name">
         <span class="brand__name--left">Tool</span><span class="brand__name--right">Box</span>
       </h1>
     </div>
     <div class="search col-md-6">
-      <div class="search__wrapper md-form form-sm" [ngClass]="{'focus': searchFocus}">
-        <i class="fa fa-search prefix"></i>
-        <input mdbActive [(ngModel)]="search" type="text" class="search__input form-control" (focus)="searchFocus = true" (focusout)="searchFocus = false">
-        <label class="search__label" for="search">Filter results...</label>
-      </div>
+      <mat-form-field>
+        <input matInput [(ngModel)]="search" type="text" placeholder="Type to search...">
+      </mat-form-field>
     </div>
   </div>
   <div class="row">
+    <p class="searching-for" *ngIf="search.length">We're trying to find anything with <em>{{search}}</em>...</p>
     <pre-categories style="width: 100%" [categories]="categories" [search]="search"></pre-categories>
   </div>
 </div>

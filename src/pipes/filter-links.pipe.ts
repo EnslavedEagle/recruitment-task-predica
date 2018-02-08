@@ -5,13 +5,9 @@ import { Category, Link } from '../interfaces';
   name: 'filterLinks'
 })
 export class FilterLinksPipe implements PipeTransform {
-  transform(categories: Category[], search: string): Category[] {
-    if (!categories) return null;
-    if (!search) return categories;
-    return categories.filter((category: Category) => {
-      const linksCopy = [...category.links];
-      const filteredLinks = <Link[]>linksCopy.filter((link) => link.title.toLowerCase().includes(search.toLowerCase()));
-      return filteredLinks.length > 0;
-    });
+  transform(links: Link[], search: string): Category[] {
+    if (!links) return null;
+    if (!search) return links;
+    return links.filter((link) => link.title.toLowerCase().includes(search.toLowerCase()));
   }
 }

@@ -1,12 +1,15 @@
 <div class="row">
-  <div class="category col-md-6" *ngFor="let category of categories | filterLinks : search">
+  <div class="category col-md-6" *ngFor="let category of categories | filterCategories : search">
     <h2 class="category__heading">{{category.category}}</h2>
     <ul class="category__links">
-      <li *ngFor="let link of category.links | fixLinks">
+      <li *ngFor="let link of category.links | filterLinks : search | fixLinks">
         <a [href]="link.url" [title]="link.title">
           {{link.title}}
         </a>
       </li>
     </ul>
+  </div>
+  <div class="category-empty" *ngIf="search !== '' && (categories | filterCategories : search).length === 0">
+    <p>Unfortunatelly, we don't have anything you're searching for.</p>
   </div>
 </div>
