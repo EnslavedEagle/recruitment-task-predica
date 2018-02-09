@@ -8,7 +8,7 @@ import { Category, Link } from '../../../interfaces';
 })
 export class CategoriesComponent {
   @Input() public categories: Category[] = [];
-  @Input() public search: string = '';
+  @Input() public search = '';
 
   constructor() {}
 }

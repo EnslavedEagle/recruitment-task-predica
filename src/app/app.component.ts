@@ -9,10 +9,10 @@ import { LinksService } from '../services/links.service';
 })
 export class AppComponent implements OnInit {
   public categories: Category[];
-  public search: string = '';
-  
+  public search = '';
+
   constructor(private _linksService: LinksService) {}
-  
+
   ngOnInit() {
     this._linksService.fetchLinks()
       .subscribe((categories) => this.categories = categories);

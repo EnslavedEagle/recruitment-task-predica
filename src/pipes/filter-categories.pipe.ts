@@ -6,8 +6,12 @@ import { Category, Link } from '../interfaces';
 })
 export class FilterCategoriesPipe implements PipeTransform {
   transform(categories: Category[], search: string): Category[] {
-    if (!categories) return null;
-    if (!search) return categories;
+    if (!categories) {
+      return null;
+    }
+    if (!search) {
+      return categories;
+    }
     return categories.filter((category: Category) => {
       const linksCopy = [...category.links];
       const filteredLinks = <Link[]>linksCopy.filter((link) => link.title.toLowerCase().includes(search.toLowerCase()));

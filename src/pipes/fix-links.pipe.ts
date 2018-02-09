@@ -7,7 +7,9 @@ import { Link } from '../interfaces';
 })
 export class FixLinksPipe implements PipeTransform {
   transform(links: Link[]): Link[] {
-    if (!links) return null;
+    if (!links) {
+      return null;
+    }
     return <Link[]>links.map((link) => {
       if (!/$http:\/\//.test(link.url)) {
         link.url = `http://${link}`;

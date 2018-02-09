@@ -6,8 +6,8 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./search.component.sass']
 })
 export class SearchComponent {
-  public searchFocus: boolean = false;
-  public search: string = '';
+  public searchFocus = false;
+  public search = '';
   @Output() update: EventEmitter<string> = new EventEmitter<string>();
 
   constructor() {}
