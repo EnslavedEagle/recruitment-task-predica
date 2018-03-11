@@ -1,5 +1,7 @@
 # Predica Recruitment Task
 
+![Screenshot](http://tth.patrykb.pl/_screenshots/screen-predica.jpg)
+
 This is a **ToolBox** Application that builds a collection of randomly generated URLs placed in randomly generated categories.
 
 The **ToolBox** fetches data from an API written in Node.js, hosted on [Heroku](https://heroku.com/). You can see the code I used for the API server [here](https://github.com/EnslavedEagle/recruitment-task-predica-backend).
